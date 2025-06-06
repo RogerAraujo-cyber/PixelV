@@ -341,20 +341,20 @@ header .container-grid {
 }
 
 .campo input{
-height: 40px;
+    height:40px;
 
-color: var(--preto);
-background-color: var(--branco);
+    color:var(--preto) ;
+    background-color: var(--branco);
 
-border: none;
-border-radius: 4px;
+    border: none;
+    border-radius: 4px;
 
-text-indent: 10px;
+    text-indent: 10px;
 
-outline: none;
+    outline: none;
 }
 
-.campo-descricao textarea{
+.campo-descricao textarea {
     color: var(--preto);
     background-color: var(--branco);
 
@@ -369,18 +369,18 @@ outline: none;
 }
 
 .campo-label,
-.campo-descricao label{
+.campo-descricao label {
     margin-bottom: 15px;
 }
 
 .campo input,
-.campo-descricao textarea{
-font-family: "Recursive", sans liner;
-font-size: 17px;
+.campo-descricao textarea {
+    font-family: "Recursive", sans liner;
+    font-size: 17px;
 }
 
 .campo input::placeholder,
-.campo-descricao textarea::placeholder{
+.campo-descricao textarea::placeholder {
     color: #a0a0a0;
 }
 
@@ -389,7 +389,7 @@ font-size: 17px;
     outline: 2px solid var(--verde-pixelV);
 }
 
-#contato form button{
+#contato form button {
     height: 40px;
     width: 60%;
 
@@ -410,29 +410,29 @@ font-size: 17px;
     transition: background-color 500ms;
 }
 
-#contato form button:hover{
+#contato form button:hover {
     background-color: var(--verde-pixelV);
 }
 
 /* ----------Footer------------- */
-footer{
+footer {
     height: 250px;
-background-image: url(./imgs/footer.png);
+    background-image: url(./imgs/footer.png);
 }
 
-footer img{
+footer img {
     height: 90px;
 }
 
-footer .container-grid{
+footer .container-grid {
     height: 100%;
 
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
-.redes-sociais{
+.redes-sociais {
     height: 50%;
 
     display: flex;
@@ -441,25 +441,164 @@ footer .container-grid{
     align-items: flex-end;
 }
 
-.redes-sociais p{
+.redes-sociais p {
     color: var(--branco);
 
     font-family: "Recursive", sans-linear-bold;
     font-size: 24px;
 }
 
-.icones-redes{
+.icones-redes {
     width: 240px;
 
     display: flex;
     justify-content: space-between;
 }
 
-.icones-redes a{
+.icones-redes a {
     color: var(--branco);
 
 }
 
-.icones-redes a:hover{
+.icones-redes a:hover {
     color: var(--verde-pixelV);
+}
+
+/* ------------Responsividade--------------- */
+@media screen and (max-width: 1024px) {
+
+    .titulo,
+    .titulo h2 {
+        font-size: 26px;
+        font-family: "Recursive", sans-linear-bold;
+    }
+
+    .menu {
+        justify-content: space-evenly;
+    }
+
+    .titulo span {
+        line-height: 45px;
+
+    }
+
+    #sobre p {
+        font-size: 16px;
+    }
+
+    #servicos .card svg {
+        height: 55px;
+    }
+}
+
+/* ----------------Menu Hamburger------------- */
+#icone-barras,
+#icone-x {
+    display: none;
+}
+
+.menu-fechado {
+    display: none;
+}
+
+/* _____________________________________________ */
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+        background: none;
+        border: none;
+
+        cursor: pointer;
+        display: unset;
+    }
+
+    header svg {
+        fill: var(--branco);
+    }
+
+    nav.menu {
+        height: 500px;
+        width: 350px;
+
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content:space-around;
+        background-color: var(--preto);
+
+        position: absolute;
+        right: 0px;
+        top: 165px;
+        z-index: 1;
+    }
+
+    .conteudo-banner img{
+        display: none;
+    }
+
+    .conteudo-banner{
+        text-align: center;
+    }
+
+    #sobre img{
+        display: none;
+    }
+
+    .titulo{
+        justify-content: center;
+    }
+
+    #cases img{
+        height: 200px;
+    }
+
+    footer .roda-pe{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer img{
+        height: 80px;
+    }
+
+    .redes-sociais{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redes-sociais svg{
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    nav.menu{
+        width: 260px;
+    }
+
+    header img{
+        width: 185px;
+    }
+
+    .conteudo-banner p{
+        font-size: 24px;
+        width: 310px;
+    }
+
+    .conteudo-banner ul{
+        font-size: 25px;
+    }
+
+    .titulo,
+    .titulo h2{
+        font-size: 20px;
+    }
 }
